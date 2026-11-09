@@ -3,8 +3,8 @@
 #daol-root .daol{--p:#2F6BFF;--pd:#1D4FD8;--ink:#191F28;--sub:#4E5968;--mute:#8B95A1;--line:#E5E8EB;--bg:#F7F8FA;--sky:#EEF3FF;--yel:#FFE27A;--kakao:#FEE500;--navy:#14224A;
   background:#fff;color:var(--ink);font-size:16px;line-height:1.6;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;text-align:left;overflow:hidden}
 #daol-root .daol,#daol-root .daol *{font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif !important;box-sizing:border-box}
-#daol-root .daol :where(p,span,li,a,button,div,dd,dt,label,em,i,small,figcaption,summary,mark,input){font-weight:inherit;letter-spacing:inherit;font-style:normal}
-#daol-root .daol :where(h1,h2,h3,h4,b,strong){font-weight:700;letter-spacing:inherit}
+#daol-root .daol :where(p,span,li,a,button,div,dd,dt,label,em,i,small,figcaption,summary,mark,input){font-weight:inherit;letter-spacing:inherit !important;font-style:normal}
+#daol-root .daol :where(h1,h2,h3,h4,b,strong){font-weight:700;letter-spacing:inherit !important}
 #daol-root .daol{font-weight:400}
 #daol-root .daol :where(h1,h2,h3,p,ul,ol,li,dl,dt,dd,figure,blockquote){margin:0;padding:0;list-style:none}
 #daol-root .daol :where(a){color:inherit;text-decoration:none}
@@ -12,18 +12,19 @@
 #daol-root .daol :where(input){font:inherit;color:inherit}
 #daol-root .daol :where(img){display:block;max-width:100%}
 #daol-root .daol :where(i,em){font-style:normal}
-#daol-root .daol mark{background:none;color:inherit}
+#daol-root .daol mark{background:none !important;color:inherit;padding:0 !important;margin:0 !important;border:0 !important;display:inline !important;line-height:inherit !important;font-size:inherit !important;box-shadow:none !important}
+#daol-root .daol :where(h1,h2,h3,h4,p){word-spacing:normal !important;text-transform:none !important}
 #daol-root .d-wrap{max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,40px)}
 #daol-root .d-kicker{display:inline-block;font-size:15px;font-weight:700;color:var(--p);margin-bottom:14px}
 #daol-root .d-kicker--light{color:#8FB0FF}
-#daol-root .d-h2{font-size:clamp(28px,3.8vw,46px);line-height:1.3;font-weight:800;letter-spacing:-.035em;text-wrap:balance}
+#daol-root .d-h2{font-size:clamp(28px,3.8vw,46px);line-height:1.3;font-weight:800;letter-spacing:-.035em !important;text-wrap:balance}
 #daol-root .d-sub{margin-top:14px;font-size:18px;color:var(--sub)}
 #daol-root .d-text{font-size:17px;line-height:1.8;color:var(--sub);margin-top:20px;text-wrap:pretty}
 #daol-root .d-text b{color:var(--ink)}
 #daol-root .d-head{margin-bottom:clamp(40px,5vw,60px)}
 #daol-root .d-head--center{text-align:center}
 
-#daol-root .d-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:58px;padding:0 26px;border-radius:16px;font-size:17px;font-weight:700;letter-spacing:-.02em;transition:transform .2s,background .2s,box-shadow .2s;white-space:nowrap}
+#daol-root .d-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:58px;padding:0 26px;border-radius:16px;font-size:17px;font-weight:700;letter-spacing:-.02em !important;transition:transform .2s,background .2s,box-shadow .2s;white-space:nowrap}
 #daol-root .d-btn:hover{transform:translateY(-2px)}
 #daol-root .d-btn:active{transform:translateY(0) scale(.98)}
 #daol-root .daol .d-btn--primary{background:var(--p);color:#fff;box-shadow:0 8px 20px rgba(47,107,255,.28)}
@@ -39,7 +40,7 @@
 /* top */
 #daol-root .d-top{position:relative;z-index:3}
 #daol-root .d-top__in{display:flex;align-items:center;gap:28px;height:76px}
-#daol-root .d-logo{display:flex;align-items:center;gap:8px;font-size:22px;font-weight:800;letter-spacing:-.04em}
+#daol-root .d-logo{display:flex;align-items:center;gap:8px;font-size:22px;font-weight:800;letter-spacing:-.04em !important}
 #daol-root .d-logo__dot{width:22px;height:22px;border-radius:7px;background:var(--p);position:relative}
 #daol-root .d-logo__dot:after{content:"";position:absolute;left:5px;top:6px;width:12px;height:10px;background:#fff;clip-path:polygon(50% 0,100% 45%,100% 100%,0 100%,0 45%)}
 #daol-root .d-nav{display:flex;gap:30px;margin-left:auto;font-size:15px;font-weight:600;color:var(--sub)}
@@ -56,7 +57,7 @@
 @keyframes dBlob{to{transform:translate(-40px,30px) scale(1.08)}}
 #daol-root .d-hero__grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(32px,5vw,72px);align-items:center;padding-bottom:clamp(56px,7vw,96px)}
 #daol-root .d-chip{display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border-radius:99px;background:#fff;box-shadow:0 2px 10px rgba(25,31,40,.06),inset 0 0 0 1px var(--line);font-size:14px;font-weight:600;color:var(--sub)}
-#daol-root .d-hero__title{margin-top:24px;font-size:clamp(40px,5.8vw,72px);line-height:1.2;font-weight:800;letter-spacing:-.045em}
+#daol-root .d-hero__title{margin-top:24px;font-size:clamp(40px,5.8vw,72px);line-height:1.2;font-weight:800;letter-spacing:-.045em !important}
 #daol-root .d-hero__title mark{position:relative;color:var(--p);white-space:nowrap}
 #daol-root .d-hero__title mark:after{content:"";position:absolute;left:-4px;right:-4px;bottom:.08em;height:.32em;background:var(--yel);z-index:-1;border-radius:4px;transform-origin:left;animation:dMark 1s .5s cubic-bezier(.6,0,.2,1) both}
 #daol-root .d-hero__title mark{z-index:0;isolation:isolate}
@@ -83,7 +84,7 @@
 #daol-root .d-card__thumb--2{background:linear-gradient(160deg,#FFF1C9,#FFFAEB)}
 #daol-root .d-card__thumb--3{background:linear-gradient(160deg,#DFF5EC,#F3FBF7)}
 #daol-root .d-card__meta{font-size:13px;color:var(--mute);font-weight:500}
-#daol-root .d-card__title{font-size:20px;font-weight:800;letter-spacing:-.03em;margin-top:2px}
+#daol-root .d-card__title{font-size:20px;font-weight:800;letter-spacing:-.03em !important;margin-top:2px}
 #daol-root .d-card__checks{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
 #daol-root .d-card__checks li{font-size:12.5px;font-weight:700;color:#0E8A62;background:#E6F7F0;padding:5px 10px;border-radius:8px}
 #daol-root .d-card__foot{display:flex;align-items:center;gap:10px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
@@ -110,7 +111,7 @@
 #daol-root .d-pain__card{position:relative;display:flex;flex-direction:column;gap:10px;padding:28px 26px;background:#fff;border-radius:24px;box-shadow:inset 0 0 0 2px transparent,0 2px 8px rgba(25,31,40,.04);transition:box-shadow .25s,background .25s,transform .25s!important;min-height:220px}
 
 #daol-root .d-pain__emo{font-size:40px;line-height:1;margin-bottom:6px;transition:transform .3s}
-#daol-root .d-pain__card b{font-size:20px;line-height:1.45;font-weight:800;letter-spacing:-.03em}
+#daol-root .d-pain__card b{font-size:20px;line-height:1.45;font-weight:800;letter-spacing:-.03em !important}
 #daol-root .d-pain__card>span:not(.d-pain__emo){font-size:15px;color:var(--sub);line-height:1.6}
 #daol-root .d-pain__check{position:absolute;right:22px;top:24px;width:28px;height:28px;border-radius:50%;box-shadow:inset 0 0 0 2px var(--line);transition:background .2s,box-shadow .2s}
 #daol-root .d-pain__check:after{content:"";position:absolute;left:9px;top:6px;width:7px;height:12px;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg) scale(0);transition:transform .2s}
@@ -156,7 +157,7 @@
 #daol-root .d-compare{max-width:820px;margin:0 auto;display:grid;gap:10px}
 #daol-root .d-compare__row{display:grid;grid-template-columns:180px minmax(0,1fr);align-items:center;gap:16px;padding:22px 28px;background:#fff;border-radius:20px;box-shadow:0 2px 8px rgba(25,31,40,.04)}
 #daol-root .d-compare__k{font-size:15px;font-weight:700;color:var(--sub)}
-#daol-root .d-compare__row p{position:relative;font-size:clamp(17px,1.7vw,20px);font-weight:700;letter-spacing:-.02em;padding-left:36px;transition:color .3s}
+#daol-root .d-compare__row p{position:relative;font-size:clamp(17px,1.7vw,20px);font-weight:700;letter-spacing:-.02em !important;padding-left:36px;transition:color .3s}
 #daol-root .d-compare__row p:before{content:"✓";position:absolute;left:0;top:50%;transform:translateY(-50%);width:24px;height:24px;border-radius:50%;background:var(--p);color:#fff;font-size:13px;display:flex;align-items:center;justify-content:center;transition:background .3s}
 #daol-root .d-compare.is-before .d-compare__row p{color:var(--mute)}
 #daol-root .d-compare.is-before .d-compare__row p:before{content:"✕";background:#C7CDD4}
@@ -165,7 +166,7 @@
 #daol-root .d-promise{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:64px}
 #daol-root .d-promise__item{padding:30px 28px;border-radius:24px;background:var(--ink);color:#fff}
 #daol-root .d-promise__item span{font-size:14px;font-weight:800;color:#8FB0FF}
-#daol-root .d-promise__item b{display:block;margin-top:14px;font-size:22px;letter-spacing:-.03em}
+#daol-root .d-promise__item b{display:block;margin-top:14px;font-size:22px;letter-spacing:-.03em !important}
 #daol-root .d-promise__item p{margin-top:8px;font-size:15px;line-height:1.65;color:#C5CCD6}
 
 /* finder */
@@ -182,7 +183,7 @@
 #daol-root .d-quiz__step b{color:var(--p)}
 #daol-root .d-quiz__panel{display:none;margin-top:10px;flex:1}
 #daol-root .d-quiz__panel.is-on{display:block;animation:dSwap .4s}
-#daol-root .d-quiz__panel h3{font-size:clamp(22px,2.2vw,26px);font-weight:800;letter-spacing:-.03em;margin-bottom:22px;display:flex;flex-direction:column}
+#daol-root .d-quiz__panel h3{font-size:clamp(22px,2.2vw,26px);font-weight:800;letter-spacing:-.03em !important;margin-bottom:22px;display:flex;flex-direction:column}
 #daol-root .d-quiz__panel h3 small{font-size:14px;font-weight:500;color:var(--mute);margin-top:4px}
 #daol-root .d-opts{display:grid;gap:10px}
 #daol-root .d-opts--2{grid-template-columns:1fr 1fr}
@@ -222,8 +223,8 @@
 #daol-root .d-steps.is-in li{opacity:1;transform:none}
 #daol-root .d-steps.is-in li:nth-child(2){transition-delay:.35s}#daol-root .d-steps.is-in li:nth-child(3){transition-delay:.7s}#daol-root .d-steps.is-in li:nth-child(4){transition-delay:1.05s}
 #daol-root .d-steps__ico{display:flex;align-items:center;justify-content:center;width:80px;height:80px;margin:0 auto 22px;border-radius:26px;background:#fff;font-size:36px;box-shadow:0 10px 24px -8px rgba(25,40,90,.2),inset 0 0 0 1px var(--line)}
-#daol-root .d-steps b{font-size:13px;font-weight:800;color:var(--p);letter-spacing:.02em}
-#daol-root .d-steps h3{margin-top:6px;font-size:21px;font-weight:800;letter-spacing:-.03em}
+#daol-root .d-steps b{font-size:13px;font-weight:800;color:var(--p);letter-spacing:.02em !important}
+#daol-root .d-steps h3{margin-top:6px;font-size:21px;font-weight:800;letter-spacing:-.03em !important}
 #daol-root .d-steps p{margin:10px auto 0;max-width:230px;font-size:15px;color:var(--sub);line-height:1.65}
 
 /* about */
@@ -244,7 +245,7 @@
 #daol-root .d-about__tip{margin-top:28px;padding:18px 20px;border-radius:16px;background:#FFF6D6;font-size:15px;font-weight:600;line-height:1.6;color:#5C4A00}
 #daol-root .d-story{margin-top:clamp(56px,7vw,80px);background:#fff;border-radius:28px;padding:clamp(28px,4vw,48px);box-shadow:0 2px 10px rgba(25,31,40,.05)}
 #daol-root .d-story__label{font-size:15px;font-weight:700;color:var(--p)}
-#daol-root .d-story h3{margin-top:8px;font-size:clamp(22px,2.4vw,28px);font-weight:800;letter-spacing:-.03em}
+#daol-root .d-story h3{margin-top:8px;font-size:clamp(22px,2.4vw,28px);font-weight:800;letter-spacing:-.03em !important}
 #daol-root .d-story__flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:28px}
 #daol-root .d-story__flow li{position:relative;padding:22px;border-radius:18px;background:var(--bg)}
 #daol-root .d-story__flow li:last-child{background:var(--sky)}
@@ -257,7 +258,7 @@
 #daol-root .d-review{display:flex;flex-direction:column;gap:16px;margin:0}
 #daol-root .d-review__shot{border-radius:22px;overflow:hidden;background:var(--bg);box-shadow:0 0 0 1px var(--line),0 18px 36px -20px rgba(25,40,90,.35);}
 #daol-root .d-review__shot img{display:block;width:100%;height:auto}
-#daol-root .d-review figcaption{font-size:16px;font-weight:700;line-height:1.55;letter-spacing:-.02em;text-wrap:pretty}
+#daol-root .d-review figcaption{font-size:16px;font-weight:700;line-height:1.55;letter-spacing:-.02em !important;text-wrap:pretty}
 @media (max-width:600px){#daol-root .d-reviews{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;-webkit-overflow-scrolling:touch}#daol-root .d-review{scroll-snap-align:start}}
 #daol-root .d-review__shot{cursor:zoom-in;transition:transform .25s}
 #daol-root .d-review__shot:hover{transform:translateY(-4px)}
@@ -271,7 +272,7 @@
 #daol-root .d-faq__list{display:grid;gap:10px}
 #daol-root .d-faq__list details{background:var(--bg);border-radius:20px;transition:background .2s}
 #daol-root .d-faq__list details[open]{background:var(--sky)}
-#daol-root .d-faq__list summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:22px 26px;font-size:clamp(16px,1.6vw,18px);font-weight:700;letter-spacing:-.02em}
+#daol-root .d-faq__list summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:22px 26px;font-size:clamp(16px,1.6vw,18px);font-weight:700;letter-spacing:-.02em !important}
 #daol-root .d-faq__list summary::-webkit-details-marker{display:none}
 #daol-root .d-faq__list summary span{flex:none;width:30px;height:30px;border-radius:10px;background:var(--p);color:#fff;font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center}
 #daol-root .d-faq__list summary:after{content:"+";margin-left:auto;font-size:24px;font-weight:400;color:var(--mute);transition:transform .25s}
@@ -284,7 +285,7 @@
 #daol-root .d-cta__box:before,#daol-root .d-cta__box:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.1)}
 #daol-root .d-cta__box:before{width:320px;height:320px;left:-100px;top:-140px}
 #daol-root .d-cta__box:after{width:240px;height:240px;right:-60px;bottom:-120px}
-#daol-root .d-cta__box h2{position:relative;font-size:clamp(26px,3.6vw,42px);line-height:1.35;font-weight:800;letter-spacing:-.035em}
+#daol-root .d-cta__box h2{position:relative;font-size:clamp(26px,3.6vw,42px);line-height:1.35;font-weight:800;letter-spacing:-.035em !important}
 #daol-root .d-cta__box p{position:relative;margin-top:14px;font-size:17px;color:#DCE6FF}
 #daol-root .d-cta__btns{position:relative;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:32px}
 #daol-root .d-visit{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:16px;margin-top:16px}
